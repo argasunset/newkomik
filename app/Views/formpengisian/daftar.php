@@ -7,7 +7,7 @@
             REGISTER USER
         </div>
         <div class="card-body">
-            <form action="" method="POST">
+            <form action="<?= base_url('daftaruser/daftar') ?>" method="POST">
                 <div class="mb-3">
                     <label for="inputUsername" class="form-label">
                         Fisrt Name
@@ -39,7 +39,7 @@
                         </label>
                         <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Masukan Password.....">
                     </div>
-                    <div class="links"> <a href="">Merasa Punya Akun? -></a><a href="/masuk">Log-in</a></div>
+                    <div class="links"> <a href="">Merasa Sudah Punya Akun? -></a><a href="/login/masuk">Log-in</a></div>
                     <div class="mb-3">
                         <input type="submit" name="login" class="btn btn-primary" value="LOGIN">
                     </div>

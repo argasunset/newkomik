@@ -24,7 +24,7 @@
                 <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin?');">Delete</button>
               </form>
               <br><br>
-              <a href="/komik">Kembali ke daftar komik</a>
+              <a href="/komik">Kembali ke daftar buku</a>
             </div>
           </div>
         </div>

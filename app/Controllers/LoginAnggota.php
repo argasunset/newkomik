@@ -35,6 +35,6 @@ class LoginAnggota extends BaseController
             return redirect()->to("login");
         }
         }
-        return view('masuk_anggota');
+        return view('formpengisian/masuk_anggota');
     }
 }

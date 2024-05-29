@@ -2,19 +2,20 @@
 
 namespace App\Controllers;
 
+use App\Models\ModelDaftarUser;
+
 class DaftarUser extends BaseController
 {
-    public function masuk()
+    public function daftar()
     {
-        $ModelDaftarUser = new \App\Models\ModelDaftarUser();
-        $login = $this->request->getPost('login');
-        if ($login) {
-            $first_name = $this->request->getPost('first_name');
-            $last_name = $this->request->getPost('last_name');
-            $email = $this->request->getPost('email');
-            $username = $this->request->getPost('username');
-            $password = $this->request->getPost('password');
-        }
-        return view('register');
+        $userData = new ModelDaftarUser();
+
+        $_POST['password'] = password_hash(
+            $_POST['password'],
+            PASSWORD_DEFAULT
+        );
+        $userData->insert($_POST);
+        session()->setFlashdata('masssage', 'selamat registrasi baerhasil');
+        return redirect()->to(base_url('user'));
     }
 }

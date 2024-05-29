@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-8">
-            <h2 class="my-3">Form Ubah Data Komik</h2>
+            <h2 class="my-3">Form Ubah Data Buku</h2>
 
             <form action="/komik/update/<?= $komik['id']; ?>" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>

@@ -6,6 +6,11 @@
         <div class="card-header bg-primary text-white">
             LOGIN USER
         </div>
+        <?php if (!empty(session()->getFlashdata('massage'))): ?>
+                <div class="alert alert-info">
+                    <?= session()->getFlashdata('massage') ?>
+                </div>
+            <? endif; ?>
         <div class="card-body">
             <form action= "" method="POST">
                 <?php if (session()->getFlashdata('error')) { ?>
@@ -26,7 +31,7 @@
                         </label>
                         <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Masukan Password.....">
                     </div>
-                    <div class="links"> <a href="">Belum Punya Akun? -></a><a href="/register">Register</a></div> 
+                    <div class="links"> <a href="">Belum Punya Akun? -></a><a href="/daftaruser/daftar">Register</a></div> 
                     <div class="mb-3">
                         <input type="submit" name="login" class="btn btn-primary" value="LOGIN">
                     </div>
